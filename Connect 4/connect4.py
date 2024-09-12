@@ -108,7 +108,7 @@ def initialize(game):
         ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
                       command=lambda: update_board(board, move=6)),
     ]
-    title = ctk.CTkLabel(game, text='Yellow\'s Turn', height=20, font=('Arial', 20))
+    title = ctk.CTkLabel(game, text='Red\'s Turn', height=20, font=('Arial', 20))
 
 
     #GRID
