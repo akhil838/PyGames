@@ -77,7 +77,7 @@ def reset():
     Turn = False
     for row in range(6):
         for col in range(7):
-            cell[row][col].configure(image=PhotoImage(file='empty.png'))
+            cell[row][col].configure(image=PhotoImage(file='assets/empty.png'))
 
 
 def initialize(game):
@@ -85,27 +85,27 @@ def initialize(game):
     rows, cols = 6, 7
     board = [[' ' for i in range(cols)] for j in range(rows)]
 
-    player1 = Player('Red', PhotoImage(file='red.png'))
-    player2 = Player('Yellow', PhotoImage(file='yellow.png'))
+    player1 = Player('Red', PhotoImage(file='assets/red.png'))
+    player2 = Player('Yellow', PhotoImage(file='assets/yellow.png'))
 
     Turn = True
 
     #UI
-    cell = [[ctk.CTkLabel(game, image=PhotoImage(file='empty.png'), text='', ) for col in range(7)] for row in range(6)]
+    cell = [[ctk.CTkLabel(game, image=PhotoImage(file='assets/empty.png'), text='', ) for col in range(7)] for row in range(6)]
     buttons = [
-        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
+        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='assets/down.png'), text='',
                       command=lambda: update_board(board, move=0)),
-        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
+        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='assets/down.png'), text='',
                       command=lambda: update_board(board, move=1)),
-        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
+        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='assets/down.png'), text='',
                       command=lambda: update_board(board, move=2)),
-        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
+        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='assets/down.png'), text='',
                       command=lambda: update_board(board, move=3)),
-        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
+        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='assets/down.png'), text='',
                       command=lambda: update_board(board, move=4)),
-        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
+        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='assets/down.png'), text='',
                       command=lambda: update_board(board, move=5)),
-        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='down.png'), text='',
+        ctk.CTkButton(game, width=100, height=60, image=PhotoImage(file='assets/down.png'), text='',
                       command=lambda: update_board(board, move=6)),
     ]
     title = ctk.CTkLabel(game, text='Red\'s Turn', height=20, font=('Arial', 20))
